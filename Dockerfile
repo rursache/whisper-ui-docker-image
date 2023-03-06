@@ -6,11 +6,11 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y ffmpeg git
     
-# get the code from python-matter-server
+# get the code from whisper-ui
 RUN git init . && git remote add origin https://github.com/hayabhay/whisper-ui.git && git pull origin main
 
 # Copy the current directory contents into the container at /app
-COPY app /app
+COPY ./app /app
 
 # Copy and install the requirements
 COPY ./requirements.txt /requirements.txt
