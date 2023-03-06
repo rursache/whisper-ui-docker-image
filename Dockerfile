@@ -9,12 +9,8 @@ RUN apt-get update && \
 # get the code from whisper-ui
 RUN git init . && git remote add origin https://github.com/hayabhay/whisper-ui.git && git pull origin main
 
-# Copy the current directory contents into the container at /app
-RUN mv app app-temp && ls -la
-COPY app-temp /app
-
-# Copy and install the requirements
-COPY ./requirements.txt /requirements.txt
+# Copy files into the container
+COPY . ./
 
 # Pip install the dependencies
 RUN pip install --upgrade pip
