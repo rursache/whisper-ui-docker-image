@@ -1,4 +1,4 @@
-# Whisper-UI Docker-Image
+# Whisper-UI Docker Image
 Docker image for [whisper-ui](https://github.com/hayabhay/whisper-ui)
 
 ### Docker CLI example
