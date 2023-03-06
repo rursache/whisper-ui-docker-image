@@ -10,5 +10,5 @@ docker run -d \
   -p 8298:8501 \
   -e TZ=Europe/Bucharest \
   -v /home/radu/.whisperui:/data \
-  rursache/whisper-ui-docker-image:latest
+  ghcr.io/rursache/whisper-ui-docker-image:latest
 ```
