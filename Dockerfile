@@ -10,7 +10,8 @@ RUN apt-get update && \
 RUN git init . && git remote add origin https://github.com/hayabhay/whisper-ui.git && git pull origin main
 
 # Copy the current directory contents into the container at /app
-COPY ./app /app
+RUN mv app app-temp && ls -la
+COPY app-temp /app
 
 # Copy and install the requirements
 COPY ./requirements.txt /requirements.txt
